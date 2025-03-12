@@ -3,10 +3,10 @@ FROM node:14.10
 RUN mkdir /app
 WORKDIR /app
 
-RUN cp -r ./app/package.json /app
+COPY package.json /app
 RUN yarn install
 
-RUN cp -r . /app
+COPY . /app
 RUN yarn test
 RUN yarn build 
 

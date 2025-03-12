@@ -2,7 +2,7 @@ FROM node:14.10
 
 RUN mkdir /app
 
-RUN cp -r /app/package.json /app
+RUN cp /app/package.json /app
 RUN yarn install
 
 RUN cp -r . /app

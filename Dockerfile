@@ -4,7 +4,7 @@ RUN mkdir /app
 WORKDIR /app
 
 
-COPY package.json /app
+COPY ./app/package.json /app
 RUN yarn install
 
 COPY . /app
